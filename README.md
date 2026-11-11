@@ -25,3 +25,5 @@ Through this course, I have learned the basics of:
 - **Python:** Basic Python programming.
 - **Git:** Basic version control and commonly used Git commands.
 - **GitHub:** Repository management, branching, committing changes, and creating Pull Requests.
+
+- **More Larning Python:** Today, I learned some new things about Python.
