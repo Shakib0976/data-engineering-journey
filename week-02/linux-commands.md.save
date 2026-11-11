@@ -1,0 +1,10 @@
+Linux Command  : 
+1. pwd  = achon khun folder e achhi ,
+2. ls  = ei folder e ki ache ,
+3.wc -l  module-01/data/orders_oct2026.csv = order file e koyta line ache dekar jonno .
+4.wc -l module-01/data/app_2026-10.log     = log  file e koyta line ache dekar jonno.
+5.grep -c "|WARN "  module-01/data/app_2026-10.log  = log file e koyta warn ache dekar jonno .
+6.grep -c "| DEBUG |"  module-01/data/app_2026-10.log  = log file e koyta DEBUG ache dekar jonno .
+7.grep "^2026-10-10" module-01/data/app_2026-10.log | grep -c "ERROR" =১০ october e koyta error hoyechilo.
+8.grep "| WARN" module-01/data/app_2026-10.log | cut -c1-10 | sort | uniq -c | sort -nr | head -1 =khun tarik e sob teke beshi warn hoyechilo,
+9.grep -ci "bKash" module-01/data/orders_oct2026.csv = order file e koyta bkash diye payment hoyece,,
