@@ -20,8 +20,6 @@ def main () :
     total_amount = 0.0
 
 
-   
-
     for raw in lines:
         parts   = raw.split(";")
     
