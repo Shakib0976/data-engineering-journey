@@ -1,21 +1,11 @@
 import os
-
-
-def clean_amount(text):
-    return float(text.strip().replace("৳", "").replace(",", ""))
-
-def clean_payment(text):
-    return text.strip().lower()  
-
-def clean_status(text):
-    return text.strip().lower()   
+import my_tools
 
 
 def main () :
     PATH = os.path.join( "data", "raw_sales.txt")
 
-    with open(PATH, encoding="utf-8") as fh:
-        lines = fh.read().strip().split("\n")
+    lines = my_tools.read_lines(PATH) 
 
     bkash_total = 0.0
     bkash_count = 0
@@ -42,9 +32,9 @@ def main () :
         # payment = parts[6].strip().lower()
         # status  = parts[7].strip().lower()
     
-        amount  = clean_amount(parts[5])
-        payment = clean_payment(parts[6])
-        status  = clean_status(parts[7])
+        amount  = my_tools.clean_amount(parts[5])
+        payment = my_tools.clean_payment(parts[6])
+        status  = my_tools.clean_status(parts[7])
     
         if status == "cancelled":
               continue
@@ -70,8 +60,6 @@ def main () :
 
 
 
-
-    print("লেভেল ১")
     print(f"bkash  {bkash_count}টা  ৳{bkash_total:.2f}")
     print(f"nagad  {nagad_count}টা  ৳{nagad_total:.2f}")
     print(f"card   {card_count}টা  ৳{card_total:.2f}")
